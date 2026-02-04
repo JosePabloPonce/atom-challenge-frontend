@@ -1,59 +1,113 @@
-# Frontend
+# Atom Challenge – Frontend (Task Management)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+Este repositorio contiene el Frontend del challenge técnico de Atom.  
+La aplicación es una lista de tareas desarrollada con Angular, que permite autenticación simple por correo y gestión completa de tareas.
 
-## Development server
+Web App desplegada en Firebase Hosting:
 
-To start a local development server, run:
+https://atom-proyecto.web.app
 
-```bash
+---
+
+## Tecnologías utilizadas
+
+- Angular 19 (Standalone Components)
+- Bootstrap 5
+- RxJS + Observables
+- Reactive Forms
+- Guards + Routing + Lazy Loading
+- Firebase Hosting
+
+---
+
+## Funcionalidades
+
+- Inicio de sesión solicitando únicamente correo
+- Creación automática de usuario si no existe (con confirmación)
+- Persistencia del token JWT en localStorage
+- Crear tareas (título + descripción)
+- Listar tareas ordenadas por fecha de creación
+- Editar tareas
+- Eliminar tareas
+- Buscador de tareas
+- Marcar tareas como completadas o pendientes mediante checkbox
+- UI responsive tipo tarjetas adaptada a desktop y móvil
+- Accesibilidad básica usando atributos ARIA
+
+---
+
+## Ejecución local
+
+Instalar dependencias:
+
+npm install
+
+Levantar servidor de desarrollo:
+
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+La aplicación estará disponible en:
 
-## Code scaffolding
+http://localhost:4200
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## Configuración del Backend API
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+El frontend consume el backend desplegado en Cloud Functions:
 
-```bash
-ng generate --help
-```
+https://api-ykigm3b4pa-uc.a.run.app
 
-## Building
+Las requests se realizan usando JWT:
 
-To build the project run:
+Authorization: Bearer <token>
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Pruebas unitarias
 
-## Running unit tests
+Ejecutar tests:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
 ng test
-```
 
-## Running end-to-end tests
+Incluye pruebas básicas de:
 
-For end-to-end (e2e) testing, run:
+- Servicios principales
+- Componentes principales
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Build y Deploy
 
-## Additional Resources
+Build de producción:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+ng build --configuration production
+
+Salida generada en:
+
+dist/frontend/browser
+
+Deploy a Firebase Hosting:
+
+firebase deploy --only hosting
+
+---
+
+## Requisitos del challenge cubiertos
+
+- Angular App con 2 páginas (Login + Tasks)
+- Formulario de login solo con correo
+- Confirmación de creación de usuario nuevo
+- CRUD completo de tareas
+- Checkbox completada/pendiente
+- Responsive design con Bootstrap
+- Guards + Lazy Loading
+- Consumo seguro del API mediante JWT
+- Unit tests básicos
+- Deploy en Firebase Hosting
+
+---
+
+## Autor
+
+Desarrollado por Jose Pablo Ponce
