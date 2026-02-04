@@ -1,4 +1,4 @@
-# Atom Challenge – Frontend (Task Management)
+# Atom Challenge – Frontend (Gestor de Tareas)
 
 Este repositorio contiene el Frontend del challenge técnico de Atom.  
 La aplicación es una lista de tareas desarrollada con Angular, que permite autenticación simple por correo y gestión completa de tareas.
