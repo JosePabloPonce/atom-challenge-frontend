@@ -36,6 +36,36 @@ https://atom-proyecto.web.app
 
 ---
 
+## Demo rápida
+
+- Inicia sesión con cualquier correo (ej: `test@atom.com`)
+- Si el usuario no existe, se solicitará confirmación para crearlo automáticamente
+- Al ingresar, podrás gestionar tus tareas de forma completa (CRUD)
+
+---
+
+## Arquitectura del proyecto
+
+El frontend sigue una estructura modular y escalable basada en buenas prácticas de Angular:
+
+- `features/` contiene las páginas principales (Login y Tasks)
+- `core/` contiene lógica global como autenticación, guards e interceptors
+- Separación clara entre UI, lógica de negocio y consumo del API
+- Componentes standalone organizados para facilitar mantenimiento y escalabilidad
+
+---
+
+## Buenas prácticas aplicadas
+
+- Servicios desacoplados usando Observables (RxJS)
+- Guards para proteger rutas autenticadas
+- Lazy Loading para optimizar carga inicial
+- Componentes bien estructurados y reutilizables
+- Enlace de datos optimizado con Angular Forms
+- UI accesible con atributos ARIA básicos
+
+---
+
 ## Ejecución local
 
 Instalar dependencias:
